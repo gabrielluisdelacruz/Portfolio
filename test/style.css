@@ -1,0 +1,351 @@
+:root {
+  --accent: #2a1d1d;
+  --muted: rgba(255,255,255,0.85);
+  --card-bg: rgba(10,6,6,0.55);
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--muted);
+  background: #111 url('bg1.png') no-repeat center top / cover fixed;
+  line-height: 1.6;
+  font-size: 18px; /* larger base font */
+}
+
+/* NAVIGATION */
+.top-nav {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+}
+.nav-pill {
+  display: flex;
+  gap: 18px;
+  background: rgba(10,6,6,0.7);
+  padding: 12px 30px;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+.nav-pill a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.hero-title {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--white);
+}
+.hero-sub {
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* SECTION */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 38px;
+  letter-spacing: 5px;
+  margin-bottom: 40px;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+.about p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+.polaroid {
+  background: #fff;
+  border: 8px solid #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transform: rotate(-5deg);
+}
+.polaroid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* POLAROID ROWS */
+.polaroid-row {
+  display: flex;
+  gap: -20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.polaroid-small {
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  border: 6px solid #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.polaroid-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.tilt-left {
+  transform: rotate(-6deg);
+  margin-right: -40px;
+}
+.tilt-right {
+  transform: rotate(6deg);
+  margin-left: -40px;
+}
+.polaroid-small:hover {
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
+}
+
+/* MINI POLAROIDS */
+.mini-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.mini-polaroid {
+  width: 250px;
+  height: 250px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  border: 6px solid #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+.mini-polaroid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mini-polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* CONTACT */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: var(--white);
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.2s ease;
+}
+.btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+#formStatus {
+  margin-left: 16px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Make form and inputs more readable for the portfolio */
+.contact-section input,
+.contact-section textarea {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  color: #fff;
+  transition: all 0.25s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.1);
+}
+
+.contact-section button.btn {
+  background: rgba(255,255,255,0.08);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  transition: all 0.3s ease;
+}
+.contact-section button.btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Slight tilt and overlap for polaroids */
+.polaroid-small:nth-child(odd),
+.mini-polaroid:nth-child(odd) {
+  transform: rotate(-6deg);
+}
+.polaroid-small:nth-child(even),
+.mini-polaroid:nth-child(even) {
+  transform: rotate(5deg);
+  margin-left: -40px;
+}
+.polaroid-small:hover,
+.mini-polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form label {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  padding: 12px 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* Send Button */
+.send-btn {
+  align-self: center;
+  width: fit-content;
+  padding: 12px 40px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.05);
+}

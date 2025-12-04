@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/calculator.css">
+</head>
+<body>
+    
+     <header>
+        <h1>CALCULATOR IN JAVASCRIPT</h1>
+     </header>
+
+     <div class="calculator">
+        <div class="box">
+            <form name="form1" action="">
+                <input type="text" name="textview" class="textview">
+            </form>
+
+            <section>
+                <div class="container">
+                    <button value="C"onclick="clearscreen()">C</button>
+                    <button value="B"onclick="backspace()">B</button>
+                    <button value="/"onclick="insert('/')">/</button>
+                    <button value="*"onclick="insert('*')">*</button>
+
+                    <button value="7" onclick="insert('7')">7</button>
+                    <button value="8"onclick="insert('8')">8</button>
+                    <button value="9"onclick="insert('9')">9</button>
+                    <button value="-"onclick="insert('-')">-</button>
+
+                    <button value="4"onclick="insert('4')">4</button>
+                    <button value="5"onclick="insert('5')">5</button>
+                    <button value="6"onclick="insert('6')">6</button>
+                    <button value="+"onclick="insert('+')">+</button>
+
+                    <button value="1"onclick="insert('1')">1</button>
+                    <button value="2"onclick="insert('2')">2</button>
+                    <button value="3"onclick="insert('3')">3</button>
+
+                    <button value="=" class="btnequal" onclick="equal()">=</button>
+                    <button value="0" class="btnzero"onclick="insert('0')">0</button>
+                    <button value="."onclick="insert('.')">.</button>
+                    <button value="sqt"onclick="sqt()">Sqt</button>
+                    <button value="sqd"onclick="sqd()">Sqd</button>
+                    <button value="cbt"onclick="cbt()">Cbt</button>
+                    <button value="cbd"onclick="cbd()">Cbd</button>
+
+
+
+            </section>
+        </div>
+     </div>
+     <script src="calculator.js"></script>
+
+</body>
+</html>

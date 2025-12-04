@@ -1,0 +1,220 @@
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, monospace, serif;
+    background: linear-gradient(#1C2B3B 0%, #446983 100%);
+    color: #FFF2EF;
+    line-height: 1.6;
+}
+
+/* === HEADER === */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 21px;
+    background: linear-gradient(#38506A 0%, #7991A8 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(93, 104, 138, 0.4);
+}
+
+.logo li {
+    list-style: none;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFF2EF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header ul {
+    display: flex;
+    gap: 10px;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header a {
+    display: block;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF2EF;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.header a:hover {
+    color: rgba(93, 104, 138);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* === HERO / HOME SECTION === */
+.home {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgba(28, 43, 59, 0.6), rgba(68, 105, 131, 0.6)), url("../img/background1.jfif") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 30px auto;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #f0e6eb;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: #dcdde1;
+    margin-bottom: 25px;
+}
+
+.cta {
+    display: inline-block;
+    background: #fbc531;
+    color: #1C2B3B;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #ffeaa7;
+    transform: scale(1.05);
+}
+
+/* === CONTENT CONTAINER === */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.95);
+    color: #2f3640;
+    border-radius: 15px;
+    padding: 40px 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.main-content img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #273c75;
+    margin: 25px 0 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f2f2f2;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #dcdde1;
+    padding: 12px;
+    text-align: center;
+}
+
+.procedure-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.procedure-content img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.resume-links ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.resume-links li a {
+    text-decoration: none;
+    color: #38506A;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.resume-links li a:hover {
+    color: #fbc531;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 25px;
+    background: linear-gradient(#38506A 0%, #7991A8 100%);
+    color: white;
+    border-radius: 0 0 12px 12px;
+    font-size: 1rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .procedure-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .procedure-content img {
+        width: 90%;
+        height: auto;
+    }
+
+    .home {
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
